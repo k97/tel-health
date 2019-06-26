@@ -1,0 +1,16 @@
+@import "./scss/variables.scss";
+@import "./scss/mixins.scss";
+
+main {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 80px);
+  top: $header-offset;
+  padding-left: $brand-sidebar-width;
+  @include layout-transition;
+  overflow-x: hidden;
+}
+
+.main-pinned {
+  padding-left: $sidebar-collapsed-width!important;
+}

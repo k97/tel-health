@@ -1,25 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useContext } from 'react';
 
-function App() {
+// Layout Imports
+import Header from './layouts/Header/header';
+import Sidebar from './layouts/Sidebar/sidebar';
+import Container from './layouts/Container/container';
+
+// State/SCSS Import
+import PatientState from './context/Patient/patientState';
+import './App.scss';
+
+const App = () => {
+
+  const [ isSidebarCollapsed, setSidebar ] = useState(false);
+  const [ patientMedication ] = useState([]);
+
+  const toggleSidebar = (flag) => {
+    setSidebar(flag);
+  }
+
+  //Refer to the PatientState for app state
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <PatientState>
+      <React.Fragment>
+        <Header />
+        <main className={isSidebarCollapsed ? 'main-pinned' : ''}>
+          <Sidebar sidebarFlag={isSidebarCollapsed} toggleSidebar={toggleSidebar} />
+          <Container />
+        </main>
+      </React.Fragment>
+    </PatientState>
   );
 }
 

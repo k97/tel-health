@@ -1,0 +1,67 @@
+.shortProfile {
+    color: #6c6c6c;
+    margin: 0.5rem 0.2rem 0 0.25rem;
+    .avatar {
+        width: 35px;
+    }
+    .profileMiscShort {
+        font-weight: 500;
+        font-size: 0.65rem;
+    }
+    .profileMiscLong {
+        display: none;
+    }
+    .profileMeta {
+     font-size: 0.75rem;
+    }
+}
+
+.longProfile {
+    .avatar {
+        width: 45px;
+    }
+    .profileMiscShort {
+        display: none;
+    }
+    .firstName, .lastName {
+        font-size: 1.0rem;
+    }
+    .profileMeta {
+        font-size: 0.85rem;
+    }
+    strong {
+        font-size: 0.80rem;
+        font-weight: 600;
+    }
+}
+
+.avatar {
+    display: inline-block;
+    margin: 0 0.5rem 0 0;
+}
+
+.profileMeta {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.firstName {
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 0.34rem 0;
+}
+
+.lastName {
+    display: inline-block;
+    font-weight: 600;
+}
+
+
+
+.profileMiscLong {
+    span {
+        display: inline-block;
+        margin: 0 2.0rem 0 0;
+    }
+}

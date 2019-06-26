@@ -1,0 +1,53 @@
+@import "../../scss/variables.scss";
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 3.0rem 0 5.0rem;
+    thead {
+        tr {
+            border-top: none;
+        }
+        th {
+            font-weight: 700;
+            padding: 1.0rem 0.5rem;
+        }
+    }
+    tr {
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+    }
+    td {
+        padding: 0.65rem 0.5rem;
+        &.date-cell {
+            font-weight: 600;
+            padding: 3.0rem 0.5rem 0.5rem;
+        }
+    }
+}
+
+.row-severity-h {
+    color: $brand-blue;
+    font-weight: 700;
+}
+
+
+.cell-severity-h,
+.cell-severity-m {
+    display: inline-block;
+    color: $white;
+    width: 20px;
+    line-height: 18px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.cell-severity-h {
+    background-color: $brand-severity-h;
+}
+.cell-severity-m {
+    background-color: $brand-severity-m;
+}
+
+.dropdown-caret {
+    cursor: pointer;
+}

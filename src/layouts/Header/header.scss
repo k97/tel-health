@@ -1,0 +1,76 @@
+@import "../../scss/variables.scss";
+
+.header {
+    background-color: $brand-blue;
+    color: $white;
+    // box-shadow: 0 2px 2px rgba(0, 0, 0, 0.09);
+    padding: 10px 20px;
+
+    z-index: 100;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+
+
+    height: $header-offset;
+
+    .brandWrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 5px 0 35px;
+    }
+
+    .brandHeader, .appProfile {
+        display: flex;
+        flex: 1;
+    }
+
+    .appProfile {
+        flex-direction: row-reverse;
+        font-size: 0.85rem;
+    }
+
+
+
+}
+.appLogo {
+    display: inline-block;
+    margin: 0 0.75rem 0 0;
+    vertical-align: middle;
+}
+
+// Fixing w/h due to lack of high-res image
+.appDropdown {
+    display: inline-block;
+    width: 9px;
+    height: 5px;
+    margin: 5px 4px 0;
+}
+.appTitle {
+    font-family: $brand-font-header;
+    font-weight: 600;
+    letter-spacing: 0.75px;
+    text-transform: uppercase;
+    font-size: 1.0rem;
+}
+
+
+.headerTabset {
+    margin: 1.0rem 0 0;
+    font-family: $brand-font-header;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+
+    .tab {
+        cursor: pointer;
+        border-bottom: 4px solid $white;
+        display: inline-block;
+        padding: 0 12px 12px;
+    }
+
+}
